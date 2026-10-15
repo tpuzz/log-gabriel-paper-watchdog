@@ -1,9 +1,8 @@
 {
-  "campaign_id": "abelian-reconstruction-paper-revision-20261015-v1",
-  "owner_run_id": "abelian-paper-editor-20261015T170923Z",
-  "generation": 1,
-  "status": "inactive",
-  "last_renewed_utc": "2026-10-15T18:29:31.443Z",
-  "lease_expires_utc": "2026-10-15T18:37:59.766Z",
-  "released_utc": "2026-10-15T18:37:59.766Z"
+  "campaign_id": "log-gabriel-functor-points-20261015T203112Z",
+  "owner_run_id": "lgfp-run-20261015T203112Z-01",
+  "generation": 2,
+  "status": "active",
+  "last_renewed_utc": "2026-10-15T20:33:53.378Z",
+  "lease_expires_utc": "2026-10-15T20:45:53.378Z"
 }
