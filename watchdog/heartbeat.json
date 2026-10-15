@@ -1,17 +1,12 @@
 {
-  "run_id": "abelian-paper-editor-20261015T170923Z",
-  "lease_generation": 1,
-  "status": "completed",
-  "last_heartbeat_utc": "2026-10-15T18:37:46.719Z",
-  "checkpoint_file": "final-20261015-v1/abelian-reconstruction-recovery.zip",
-  "checkpoint_sha256": "e52965dd95fcd4045f6d456cfb29c2af2cd828546d1b6c8aa3f3b0ed70dbb4a9",
+  "campaign_id": "log-gabriel-functor-points-20261015T203112Z",
+  "run_id": "lgfp-run-20261015T203112Z-01",
+  "lease_generation": 2,
+  "status": "running",
+  "last_heartbeat_utc": "2026-10-15T20:36:27.649Z",
+  "checkpoint_file": "checkpoint-0001-intake.zip",
+  "checkpoint_sha256": "7ef1445a45577e65aebc0642ea3e85bda76beba288b2640ff21d324b0c9d6d80",
   "watchdog_recovery_armed": false,
-  "terminal_delivery_complete": true,
-  "campaign_id": "abelian-reconstruction-paper-revision-20261015-v1",
-  "recovery_mode": "finalize_only",
-  "dropbox_final_status_verified": true,
-  "completion_classification": "COMPLETE_AND_VERIFIED",
-  "final_status_file": "FINAL_STATUS.md",
-  "final_status_sha256": "bd5729a28cca4aa5f4fe8fa8e9a8ea2015693a841088268abed4e32f7a2119be",
-  "in_chat_delivery_pending": true
+  "terminal_delivery_complete": false,
+  "dropbox_final_status_verified": false
 }
