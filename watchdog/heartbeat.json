@@ -1,11 +1,11 @@
 {
   "campaign_id": "log-gabriel-functor-points-20261015T203112Z",
-  "run_id": "lgfp-run-20261015T203112Z-01",
-  "lease_generation": 2,
-  "status": "interrupted",
-  "last_heartbeat_utc": "2026-10-15T22:48:46.820Z",
-  "checkpoint_file": "checkpoint-0013-Hhostile-fullfunctor.zip",
-  "checkpoint_sha256": "cb940305ac0745f7b23c1e1d3d7008c4fbf2cd58e48f059382424dd64b86bd63",
+  "run_id": "lgfp-recovery-20261015T235139Z-93be4cc1",
+  "lease_generation": 3,
+  "status": "running",
+  "last_heartbeat_utc": "2026-10-15T23:53:54.541Z",
+  "checkpoint_file": "checkpoint-0014-recovery-bootstrap.zip",
+  "checkpoint_sha256": "b246930bcb1c5c24e9fb1d3e648d5877161b7a491bf82453c17b204df4a5ff01",
   "watchdog_recovery_armed": false,
   "terminal_delivery_complete": false,
   "dropbox_final_status_verified": false
