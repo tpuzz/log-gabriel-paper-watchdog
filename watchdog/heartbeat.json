@@ -1,11 +1,12 @@
 {
   "run_id": "abelian-paper-editor-20261015T170923Z",
   "lease_generation": 1,
-  "status": "running",
-  "last_heartbeat_utc": "2026-10-15T18:21:39.055Z",
-  "checkpoint_file": "checkpoint-0004.zip",
-  "checkpoint_sha256": "e5768906c07b3aa8a498cdc380626fa7bfa8a71ff6d68ab36a9dc239f4bbae55",
+  "status": "checkpointed",
+  "last_heartbeat_utc": "2026-10-15T18:35:03.860Z",
+  "checkpoint_file": "final-20261015-v1/abelian-reconstruction-recovery.zip",
+  "checkpoint_sha256": "e52965dd95fcd4045f6d456cfb29c2af2cd828546d1b6c8aa3f3b0ed70dbb4a9",
   "watchdog_recovery_armed": true,
   "terminal_delivery_complete": false,
-  "campaign_id": "abelian-reconstruction-paper-revision-20261015-v1"
+  "campaign_id": "abelian-reconstruction-paper-revision-20261015-v1",
+  "recovery_mode": "finalize_only"
 }
