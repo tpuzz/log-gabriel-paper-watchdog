@@ -2,9 +2,9 @@
   "run_id": "abelian-paper-editor-20261015T170923Z",
   "lease_generation": 1,
   "status": "running",
-  "last_heartbeat_utc": "2026-10-15T17:51:56.019Z",
-  "checkpoint_file": "checkpoint-0003.zip",
-  "checkpoint_sha256": "f78a9183ffefe41ae53f3eb388c21731cc17d3b0e3649a7b3f980f39c4fe621b",
+  "last_heartbeat_utc": "2026-10-15T18:02:25.254Z",
+  "checkpoint_file": "checkpoint-0004.zip",
+  "checkpoint_sha256": "e5768906c07b3aa8a498cdc380626fa7bfa8a71ff6d68ab36a9dc239f4bbae55",
   "watchdog_recovery_armed": true,
   "terminal_delivery_complete": false
 }
