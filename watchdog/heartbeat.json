@@ -1,12 +1,17 @@
 {
   "run_id": "abelian-paper-editor-20261015T170923Z",
   "lease_generation": 1,
-  "status": "checkpointed",
-  "last_heartbeat_utc": "2026-10-15T18:35:03.860Z",
+  "status": "completed",
+  "last_heartbeat_utc": "2026-10-15T18:37:46.719Z",
   "checkpoint_file": "final-20261015-v1/abelian-reconstruction-recovery.zip",
   "checkpoint_sha256": "e52965dd95fcd4045f6d456cfb29c2af2cd828546d1b6c8aa3f3b0ed70dbb4a9",
-  "watchdog_recovery_armed": true,
-  "terminal_delivery_complete": false,
+  "watchdog_recovery_armed": false,
+  "terminal_delivery_complete": true,
   "campaign_id": "abelian-reconstruction-paper-revision-20261015-v1",
-  "recovery_mode": "finalize_only"
+  "recovery_mode": "finalize_only",
+  "dropbox_final_status_verified": true,
+  "completion_classification": "COMPLETE_AND_VERIFIED",
+  "final_status_file": "FINAL_STATUS.md",
+  "final_status_sha256": "bd5729a28cca4aa5f4fe8fa8e9a8ea2015693a841088268abed4e32f7a2119be",
+  "in_chat_delivery_pending": true
 }
