@@ -3,7 +3,7 @@
   "run_id": "lgfp-run-20261015T203112Z-01",
   "lease_generation": 2,
   "status": "interrupted",
-  "last_heartbeat_utc": "2026-10-15T22:43:05.782Z",
+  "last_heartbeat_utc": "2026-10-15T22:48:46.820Z",
   "checkpoint_file": "checkpoint-0013-Hhostile-fullfunctor.zip",
   "checkpoint_sha256": "cb940305ac0745f7b23c1e1d3d7008c4fbf2cd58e48f059382424dd64b86bd63",
   "watchdog_recovery_armed": false,
