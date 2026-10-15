@@ -1,8 +1,8 @@
 {
   "campaign_id": "log-gabriel-functor-points-20261015T203112Z",
-  "owner_run_id": "lgfp-run-20261015T203112Z-01",
-  "generation": 2,
-  "status": "inactive",
-  "last_renewed_utc": "2026-10-15T22:48:46.820Z",
-  "lease_expires_utc": "2026-10-15T22:48:46.820Z"
+  "owner_run_id": "lgfp-recovery-20261015T235139Z-93be4cc1",
+  "generation": 3,
+  "status": "active",
+  "last_renewed_utc": "2026-10-15T23:51:39.441Z",
+  "lease_expires_utc": "2026-10-16T00:03:39.441Z"
 }
