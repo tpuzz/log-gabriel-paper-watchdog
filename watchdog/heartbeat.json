@@ -2,9 +2,10 @@
   "run_id": "abelian-paper-editor-20261015T170923Z",
   "lease_generation": 1,
   "status": "running",
-  "last_heartbeat_utc": "2026-10-15T18:02:25.254Z",
+  "last_heartbeat_utc": "2026-10-15T18:11:14.836Z",
   "checkpoint_file": "checkpoint-0004.zip",
   "checkpoint_sha256": "e5768906c07b3aa8a498cdc380626fa7bfa8a71ff6d68ab36a9dc239f4bbae55",
   "watchdog_recovery_armed": true,
-  "terminal_delivery_complete": false
+  "terminal_delivery_complete": false,
+  "campaign_id": "abelian-reconstruction-paper-revision-20261015-v1"
 }
