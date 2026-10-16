@@ -3,9 +3,9 @@
   "run_id": "lgfp-recovery-20261015T235139Z-93be4cc1",
   "lease_generation": 3,
   "status": "running",
-  "last_heartbeat_utc": "2026-10-16T01:27:57.213Z",
-  "checkpoint_file": "checkpoint-0020-Fhostile.zip",
-  "checkpoint_sha256": "9cf140dd6ba1e6d55899c363a126d653d76d0741ae33e57fd5ad11f8302a38b0",
+  "last_heartbeat_utc": "2026-10-16T01:33:03.602Z",
+  "checkpoint_file": "checkpoint-0021-adjunction-frontier.zip",
+  "checkpoint_sha256": "b24998acf5f1219b75cf75639effe9c5fe23bda967f35afe81a2a20cff7933b6",
   "watchdog_recovery_armed": false,
   "terminal_delivery_complete": false,
   "dropbox_final_status_verified": false
