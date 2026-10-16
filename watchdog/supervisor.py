@@ -72,8 +72,6 @@ def decide(hb, owner, now):
         return Decision("stop", "Deliberate pause does not authorize resumption")
     if status not in ("running", "checkpointed", "interrupted", "blocked", "completed", "expired"):
         return Decision("wait", "Unknown status")
-    if status in ("running", "checkpointed") and hb.get("watchdog_recovery_armed") is not True:
-        return Decision("wait", "Recovery not armed")
     run_id = hb.get("run_id")
     generation, previous_generation = owner.get("generation"), hb.get("lease_generation")
     if (not isinstance(run_id, str) or not run_id
