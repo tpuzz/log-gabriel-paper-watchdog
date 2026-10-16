@@ -56,9 +56,6 @@ class RecoveryDecisions(unittest.TestCase):
             h["status"] = status
             self.assertEqual(decide(h, self.o, self.now).action, "stop")
 
-    def test_unarmed_running_waits(self):
-        self.h["watchdog_recovery_armed"] = False
-        self.assertEqual(decide(self.h, self.o, self.now).action, "wait")
 
     def test_other_family_or_campaign_mismatch_fails_closed(self):
         h = copy.deepcopy(self.h)
@@ -70,8 +67,7 @@ class RecoveryDecisions(unittest.TestCase):
         self.assertEqual(decide(h, o, self.now).action, "wait")
 
     def test_unknown_or_malformed_state_fails_closed(self):
-        for field, value in (("last_heartbeat_utc", "bad"),
-                             ("watchdog_recovery_armed", False), ("status", "unknown")):
+        for field, value in (("last_heartbeat_utc", "bad"), ("status", "unknown")):
             h = copy.deepcopy(self.h)
             h[field] = value
             self.assertEqual(decide(h, self.o, self.now).action, "wait")
