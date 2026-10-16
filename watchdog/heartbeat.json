@@ -3,7 +3,7 @@
   "run_id": "lgfp-recovery-20261015T235139Z-93be4cc1",
   "lease_generation": 3,
   "status": "running",
-  "last_heartbeat_utc": "2026-10-16T01:33:03.602Z",
+  "last_heartbeat_utc": "2026-10-16T01:38:15.224Z",
   "checkpoint_file": "checkpoint-0021-adjunction-frontier.zip",
   "checkpoint_sha256": "b24998acf5f1219b75cf75639effe9c5fe23bda967f35afe81a2a20cff7933b6",
   "watchdog_recovery_armed": false,
