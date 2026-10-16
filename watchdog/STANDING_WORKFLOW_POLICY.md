@@ -1,11 +1,58 @@
-# Watchdog policy
-The supervisor is restricted to this repository. It reads only its own owner and heartbeat, checks for stale or interrupted execution, and emits a recovery-verification request. The consumer reads authorized private task state to decide whether resumption or finalization is permitted.
+# Log Gabriel watchdog policy
 
-A newly opened pull request with title beginning LOG_GABRIEL_PAPER_STALE is a request to check, never permission to extend an authorization. The supervisor does not edit manuscript files, read private storage, or claim ownership. It uses a 12-minute cooperative lease, a 20-minute stale threshold for silent running, and one-minute polling.
+This repository is shared coordination infrastructure for Log Gabriel workflows whose exact
+`campaign_id` begins with `log-gabriel-`. The supervisor reads only its own public
+`watchdog/heartbeat.json` and `watchdog/owner.json`. It never performs research or editorial
+work, reads private storage, grants authorization, or changes a campaign clock.
 
-The private task instructions govern every editorial action, immutable clock, checkpoint and delivery. Missing automation capability must be reported accurately. Completed, cancelled, or intentionally paused work is not restarted.
+A newly opened pull request whose title begins
+
+`LOG_GABRIEL_WORKFLOW_STALE`
+
+is only a recovery-verification wake-up. The exact campaign is carried by the coherent public
+heartbeat/owner pair and by the incident marker. The recovery consumer must independently read the
+newest coherent private durable state for that exact campaign before any takeover.
+
+The supervisor is campaign-generic within the `log-gabriel-` family. It rejects mismatched
+heartbeat/owner campaign IDs and all non-Log-Gabriel campaign IDs. This replaces the obsolete
+single-campaign paper-revision binding.
+
+The supervisor uses a 12-minute cooperative lease, a 20-minute stale threshold for silent
+`running`/`checkpointed` executions, and one-minute polling. An explicit
+`interrupted`/`blocked` status with an expired/released matching lease may request recovery
+without waiting another 20 minutes. For silent `running`/`checkpointed` recovery, the heartbeat
+must also have `watchdog_recovery_armed=true`.
+
+## Private authorization is authoritative
+
+No start time, delivery reserve, hard deadline, extension, mathematical scope, or source path is
+hard-coded in this public policy or in the recovery wake-up. The recovery consumer must read the
+latest authoritative private authorization record (for example `AUTHORIZATION.json` and any
+newer superseding state) every time it handles a wake-up.
+
+A user-authorized extension updates the same campaign's effective clock only when it is actually
+recorded in the newest coherent private state. The consumer must preserve the original start and
+all elapsed work; it must not infer an extension from a PR or from this repository.
+
+At or after the current private delivery reserve, only reconciliation, persistence, packaging and
+delivery of already-produced work are permitted. At or after the current private hard deadline,
+no substantive continuation is permitted without a newer explicit user authorization.
 
 ## Recovery acknowledgement and bounded retry
-Signals are deduplicated by campaign, run, generation and attempt. An expired owner exactly one generation ahead of an old heartbeat can be an orphaned handover; independently inspect private state before any claim. After a request, wait six minutes for a fresh coherent successor owner and heartbeat. At most three requests are emitted for an incident; then emit one LOG_GABRIEL_PAPER_INFRA_FAILURE alert. The supervisor never grants new authorization. The private recovery consumer alone checks immutable start, delivery reserve and hard deadline before choosing permitted work.
 
-A completed/expired status with unverified delivery requests finalization only. Stop after terminal_delivery_complete and dropbox_final_status_verified are both true. Deliberate pause or cancellation does not authorize resumption. Clean shutdown publishes and verifies private final state before terminal flags, then releases the existing owner conditionally.
+Signals are deduplicated by exact campaign, run, generation and attempt. An expired owner exactly
+one generation ahead of an old heartbeat can be an orphaned handover; the consumer must still
+inspect private state before any claim.
+
+After a wake-up, the supervisor waits six minutes for a coherent successor owner/heartbeat under
+the same campaign and authorization. At most three recovery requests are emitted for one incident.
+If none is acknowledged, it emits one
+
+`LOG_GABRIEL_WORKFLOW_INFRA_FAILURE`
+
+alert. The supervisor never treats a PR as evidence that recovery succeeded.
+
+A clean terminal state stops supervision only after both `terminal_delivery_complete` and
+`dropbox_final_status_verified` are true. Deliberate pause or cancellation does not authorize
+resumption. Clean shutdown persists/verifies the private final state before terminal flags and
+conditionally releases ownership.
