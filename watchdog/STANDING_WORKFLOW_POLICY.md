@@ -20,8 +20,9 @@ single-campaign paper-revision binding.
 The supervisor uses a 12-minute cooperative lease, a 20-minute stale threshold for silent
 `running`/`checkpointed` executions, and one-minute polling. An explicit
 `interrupted`/`blocked` status with an expired/released matching lease may request recovery
-without waiting another 20 minutes. For silent `running`/`checkpointed` recovery, the heartbeat
-must also have `watchdog_recovery_armed=true`.
+without waiting another 20 minutes. For silent `running`/`checkpointed` recovery, the decisive
+public conditions are a heartbeat stale by at least 20 minutes and an expired matching lease;
+the private recovery consumer still independently verifies authorization and scope before any work.
 
 ## Private authorization is authoritative
 
